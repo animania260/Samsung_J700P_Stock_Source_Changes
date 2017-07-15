@@ -192,9 +192,7 @@ static __s32 volume_cmds_alloc1(__s32 size)
 	if (vol_cmds) {
 		vol_cmds_d = kzalloc(vol_cmd_cnt * sizeof(struct vol_cmds_d_),
 					GFP_KERNEL);
-	} else
-		vol_cmd_cnt = 0;
-
+	}
 	if (vol_cmds_d)
 		return 0;
 	volume_cmds_free();
